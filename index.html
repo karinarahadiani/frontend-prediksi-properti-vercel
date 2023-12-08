@@ -120,8 +120,15 @@
                 });
             }
         } else {
-            const errorData = await response.json();
-            console.error('Login Error:', errorData);
+          var groupButton = document.getElementById("groupButton");
+            if (groupButton) {
+                groupButton.addEventListener("click", function (e) {
+                    // Redirect to the "homely2" page
+                    window.location.href = "./homely-2.html"; // Change the URL as needed
+                });
+            }
+            //const errorData = await response.json();
+            //console.error('Login Error:', errorData);
             // Handle login error (e.g., display an error message)
         }
 
